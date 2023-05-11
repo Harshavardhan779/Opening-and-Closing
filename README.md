@@ -25,7 +25,7 @@ Use Closing Operation.
 ### Developed by: Harsha vardhan
 ### Register no: 212222240114
 
-# Import the necessary packages
+### Import the necessary packages
 ``` Python
 import cv2
 import numpy as np
@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 
 
 ```
-# Create the Text using cv2.putText
+### Create the Text using cv2.putText
 
 ``` Python
 img=np.zeros((100,400),dtype='uint8')
@@ -43,13 +43,13 @@ plt.axis('off')
 plt.imshow(img)
 plt.show()
 ```
-# Create the structuring element
+### Create the structuring element
 
 
 ``` Python
 kernel=cv2.getStructuringElement(cv2.MORPH_RECT,(9,9))
 ```
-# Use Opening operation
+### Use Opening operation
 ``` Python
 image_open=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
 plt.axis('off')
@@ -58,7 +58,7 @@ plt.show()
 
 
 ```
-# Use Closing Operation
+### Use Closing Operation
 ``` Python
 image_close=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
 plt.axis('off')
